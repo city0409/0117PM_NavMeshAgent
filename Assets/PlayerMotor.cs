@@ -6,17 +6,47 @@ using UnityEngine.AI;
 public class PlayerMotor : MonoBehaviour 
 {
     private NavMeshAgent agent;
+    private Transform target;
+    [SerializeField]
+    private float lookSpeed = 1f;
 
-
-    private void Start () 
+    private void Awake () 
 	{
         agent = GetComponent<NavMeshAgent>();
-
     }
+
+    private void Update()
+    {
+        if (target )
+        {
+            agent.SetDestination(target.position);
+            LookTarget();
+        }
+    } 
 
     public  void MoveToPoint (Vector3 point) 
 	{
         agent.SetDestination(point);
+    }
 
+    public void FollowTarget(Interactable newTarget)
+    {
+        agent.stoppingDistance = newTarget.radius;
+        target = newTarget.transform;
+        agent.updateRotation = false;
+    }
+
+    public void StopFollowTarget()
+    {
+        agent.stoppingDistance = 0f;
+        target = null;
+        agent.updateRotation = true;
+    }
+
+    private void LookTarget()
+    {
+        Vector3 direction = (transform.position - target.position).normalized;
+        Quaternion lookQuaternion = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.z));
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookQuaternion, Time.deltaTime * lookSpeed);
     }
 }

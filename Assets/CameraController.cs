@@ -32,8 +32,8 @@ public class CameraController : MonoBehaviour
     {
         transform.position = target.position - offset * currentZoom;
 
-        transform.LookAt(target.position);
+        transform.LookAt(target);
 
-        transform.RotateAround(target.position, Vector3.up, -lookAngle);
+        transform.RotateAround(target.position, Vector3.up, lookAngle);
     }
 }
