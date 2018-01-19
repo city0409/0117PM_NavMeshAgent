@@ -45,7 +45,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void LookTarget()
     {
-        Vector3 direction = (transform.position - target.position).normalized;
+        Vector3 direction = (target.position-transform.position ).normalized;
         Quaternion lookQuaternion = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.z));
         transform.rotation = Quaternion.Lerp(transform.rotation, lookQuaternion, Time.deltaTime * lookSpeed);
     }

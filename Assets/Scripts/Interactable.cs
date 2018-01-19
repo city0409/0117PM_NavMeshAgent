@@ -28,7 +28,6 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        print("be focus");
 
     }
 
