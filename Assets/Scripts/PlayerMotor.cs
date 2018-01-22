@@ -8,7 +8,7 @@ public class PlayerMotor : MonoBehaviour
     private NavMeshAgent agent;
     private Transform target;
     [SerializeField]
-    private float lookSpeed = 1f;
+    private float lookSpeed = 4f;
 
     private void Awake () 
 	{

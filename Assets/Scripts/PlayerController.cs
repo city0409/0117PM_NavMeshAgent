@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour 
 {
@@ -22,6 +23,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update () 
 	{
+        if (EventSystem .current .IsPointerOverGameObject())
+        {
+
+        }
         if (Input .GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
