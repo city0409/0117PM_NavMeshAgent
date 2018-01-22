@@ -16,6 +16,9 @@ public class PickUpItem : Interactable
 
     private void PickUp() 
 	{
-        Destroy(gameObject);
-	}
+        if (Inventory.instance .Add (item))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

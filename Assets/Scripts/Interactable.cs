@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
     private Transform playerTrans;
     private bool isFocus;
 
+    private bool hasInteracted = false;
+
 	private void Start () 
 	{
 		
@@ -18,8 +20,9 @@ public class Interactable : MonoBehaviour
 	{
         if (isFocus )
         {
-            if (Vector3 .Distance (playerTrans .position ,transform .position )<radius )
+            if (!hasInteracted && Vector3.Distance (playerTrans .position ,transform .position )<radius )
             {
+                hasInteracted = true;
                 Interact();
             }
         }
@@ -34,11 +37,13 @@ public class Interactable : MonoBehaviour
     public void OnFocus(Transform playerTrans)
     {
         this.playerTrans = playerTrans;
+        hasInteracted = false;
         isFocus = true;
     }
 
     public void OnDeFocus( )
     {
+        hasInteracted = false;
         this.playerTrans = null ;
         isFocus = false ;
     }

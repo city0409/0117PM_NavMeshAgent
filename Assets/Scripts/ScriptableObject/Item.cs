@@ -8,4 +8,9 @@ public class Item : ScriptableObject
     new public string name = "New Item";
     public Sprite icon;
     public bool isDefultItem;
+
+    public virtual void Use()
+    {
+        Debug.Log("Use"+name );
+    }
 }
