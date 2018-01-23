@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ef887ae6be83cc408fba4eace4a6c6e, type: 3}
-  m_Name: New Item
+  m_Name: Platelegs
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: Defult Shoes
+  icon: {fileID: 21300000, guid: d7bf5c02099c7b24c8794f7e2ade5262, type: 3}
   isDefultItem: 0
