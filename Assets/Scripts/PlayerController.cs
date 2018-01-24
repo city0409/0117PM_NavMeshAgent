@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 	{
         if (EventSystem .current .IsPointerOverGameObject())
         {
-
+            return;
         }
         if (Input .GetMouseButtonDown(0))
         {

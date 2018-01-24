@@ -8,9 +8,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef887ae6be83cc408fba4eace4a6c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: fa873426fb19e884cbfbb84836a2d02e, type: 3}
   m_Name: Defult Pants
   m_EditorClassIdentifier: 
   name: Defult Pants
   icon: {fileID: 0}
   isDefultItem: 1
+  mesh: {fileID: 137034599353567720, guid: 90b71f999ac2cb74eae6bc328327fd7a, type: 2}
+  equipSlot: 2
+  coveredMeshRegions: 
+  armor: 0
+  damage: 0
