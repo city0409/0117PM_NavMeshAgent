@@ -3244,6 +3244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78407dc6972dfe948946a88908ef8821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defultEquipments:
+  - {fileID: 11400000, guid: a5004a33cc51c504291c09fc7b4ab62b, type: 2}
+  - {fileID: 11400000, guid: 86763ce0f0113f24f87cb936783ab2ca, type: 2}
+  - {fileID: 11400000, guid: 9d5666f7505dd63459812241bc6b3c6f, type: 2}
+  - {fileID: 11400000, guid: 7718e12d173479e4a9029b4f4b301880, type: 2}
   targetMesh: {fileID: 1160054970}
   testEquipment: {fileID: 11400000, guid: c99d811022fd8f6438a010945034375e, type: 2}
 --- !u!1 &619743412
@@ -4723,6 +4728,7 @@ GameObject:
   - component: {fileID: 950127233}
   - component: {fileID: 950127234}
   - component: {fileID: 950127235}
+  - component: {fileID: 950127236}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4813,6 +4819,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6acc0c6453d0f24caedbf0ae61de402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &950127236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950127229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f16ea19995aa2d4db5f81361be05447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage:
+    baseValue: 0
+    modifiers: 
+  armor:
+    baseValue: 0
+    modifiers: 
 --- !u!1001 &962172578
 Prefab:
   m_ObjectHideFlags: 0
