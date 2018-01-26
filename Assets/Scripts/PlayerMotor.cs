@@ -32,7 +32,7 @@ public class PlayerMotor : MonoBehaviour
     public void FollowTarget(Interactable newTarget)
     {
         agent.stoppingDistance = newTarget.radius;
-        target = newTarget.transform;
+        target = newTarget.InteractionTrans;
         agent.updateRotation = false;
     }
 
@@ -46,6 +46,11 @@ public class PlayerMotor : MonoBehaviour
     private void LookTarget()
     {
         Vector3 direction = (target.position-transform.position ).normalized;
+        if (new Vector3(direction.x, 0f, direction.z) == Vector3.zero)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime * lookSpeed);
+            return;
+        }
         Quaternion lookQuaternion = Quaternion.LookRotation(new Vector3(direction.x, 0f, direction.z));
         transform.rotation = Quaternion.Lerp(transform.rotation, lookQuaternion, Time.deltaTime * lookSpeed);
     }
