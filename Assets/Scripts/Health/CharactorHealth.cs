@@ -12,6 +12,10 @@ public class CharactorHealth : MonoBehaviour
     [SerializeField]
     protected Stats armor;
 
+    public Stats Damage { get { return damage; } }
+    public Stats Armor { get { return armor; } }
+
+
     private void Awake()
     {
         currentHealth = maxHealth;

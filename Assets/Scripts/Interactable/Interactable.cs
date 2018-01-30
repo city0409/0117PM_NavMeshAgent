@@ -37,7 +37,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-
+        print("Interact ");
     }
 
     public void OnFocus(Transform playerTrans)

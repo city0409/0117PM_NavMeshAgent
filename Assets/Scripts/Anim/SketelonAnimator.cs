@@ -8,7 +8,8 @@ public class SketelonAnimator : MonoBehaviour
     private const float dampTime = 0.1f;
 
     private NavMeshAgent agent;
-    private Animator anim;
+    [SerializeField]
+    protected  Animator anim;
 
     private float speedPercent;
 

@@ -11,11 +11,16 @@ public class EnemyController : MonoBehaviour
 
     private NavMeshAgent agent;
     private Transform targetTrans;
+    [SerializeField]
     private float lookSpeed=4f;
+    [SerializeField]
+    private CharacterCombat combat;
+
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        combat = GetComponent<CharacterCombat>();
     }
 
     private void Start () 
@@ -34,6 +39,10 @@ public class EnemyController : MonoBehaviour
                 agent.SetDestination(targetTrans.position);
                 if (distance <=agent .stoppingDistance )
                 {
+                    CharactorHealth playerHealth = targetTrans.GetComponent<CharactorHealth>();
+                    if (playerHealth != null)
+                        combat.Attack(playerHealth);
+
                     LookTarget();
                     //transform.LookAt(targetTrans);
                 }
