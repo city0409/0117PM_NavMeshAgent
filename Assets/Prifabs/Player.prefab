@@ -162,6 +162,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1220232048690128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4465789710374000}
+  m_Layer: 0
+  m_Name: HPpos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1229972062911834
 GameObject:
   m_ObjectHideFlags: 1
@@ -1019,6 +1034,7 @@ Transform:
   m_Children:
   - {fileID: 4909455086050124}
   - {fileID: 4585443261555322}
+  - {fileID: 4465789710374000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1034,6 +1050,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4098848591377268}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4465789710374000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220232048690128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4451776092588204}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4524354492367616
 Transform:
@@ -1436,6 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a731af1122f4ac47891b1f0b88efc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HPpos: {fileID: 4465789710374000}
 --- !u!114 &114425089866682172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1476,6 +1506,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6acc0c6453d0f24caedbf0ae61de402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 95433560831688836}
+  combat: {fileID: 114366029636261156}
+  weaponAnimSetDatas:
+  - weapons:
+    - {fileID: 11400000, guid: fae589a2b67a4454680978e2ac6e38de, type: 2}
+    weaponIndex: 0
+    attackIndex: 1
+  - weapons:
+    - {fileID: 11400000, guid: 7eba904090087ae4da2be0e3d830cd1c, type: 2}
+    weaponIndex: 1
+    attackIndex: 2
 --- !u!136 &136393643893048742
 CapsuleCollider:
   m_ObjectHideFlags: 1

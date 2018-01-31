@@ -145,7 +145,7 @@ ModelImporter:
     4300014: Pants
     4300016: Body
     4300018: Cylinder
-    7400000: Default Take
+    7400000: Attack_Unarmed_01
     7400002: Idle
     7400004: Run
     7400006: Walk
@@ -252,7 +252,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Default Take
+      name: Attack_Unarmed_01
       takeName: Default Take
       firstFrame: 0
       lastFrame: 98

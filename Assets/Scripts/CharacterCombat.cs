@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterCombat : MonoBehaviour
 {
+    [SerializeField]
+    private Transform HPpos;
     private float attackSpeed = 1f;
     private float attackCoolDown = 0f;
     private CharactorHealth myHealth;
@@ -14,6 +16,11 @@ public class CharacterCombat : MonoBehaviour
     {
         myHealth = GetComponent<CharactorHealth>();
 
+    }
+
+    private void Start()
+    {
+        HealthUIManager.instance.Create(HPpos, myHealth);
     }
 
     public void Update()
